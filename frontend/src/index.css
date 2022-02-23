@@ -1,0 +1,206 @@
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+  display: inline;
+  padding: 2px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+  font-size: 20px;
+  text-shadow: 0 0 3px #71d389, 0 0 5px #7aaab3;
+}
+
+header li {
+  margin: 10px;
+}
+
+body {
+  margin: 0;
+  display: center;
+  font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(/images/plants.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: bold;
+}
+
+.imagecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+  text-shadow: 0 0 3px #1d4226, 0 0 5px #2d0f9b;
+  color: #b3ceb9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.home {
+  font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+  color: #b3ceb9;
+}
+
+.label {
+  float: center;
+  width: 20em;
+  text-align: center;
+  padding-top: 20%;
+  text-shadow: 0 0 3px #71d389, 0 0 5px #7aaab3;
+}
+
+.add {
+  font-size: 35px;
+  text-align: center;
+  color: #f8f8f8;
+  margin: 10 10 10 10;
+  height: 10em;
+  padding-right: 35%;
+  padding-left: 35%;
+  padding-bottom: 35%;
+  padding-top: 10%;
+  text-shadow: 0 0 3px #d2dd30, 0 0 5px #200b69;
+  background: rgba(231, 226, 226, 0.4);
+}
+
+.add input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 50px 20px;
+  margin: 0.9vw 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+}
+
+.add textarea {
+  height: 15vh;
+}
+
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-shadow: 0 0 3px #104b1e, 0 0 5px #14168f;
+}
+.linechart {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
+  display: center;
+  padding: 150px;
+  background: rgba(136, 213, 236, 0.2);
+  border-radius: 50%;
+}
+.piechart {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
+  display: center;
+  padding: 150px;
+  background: rgba(218, 229, 151, 0.2);
+  border-radius: 50%;
+}
+
+.barchart {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
+  display: center;
+  padding: 150px;
+  height: 30%;
+  width: 30%;
+  background: rgba(210, 241, 152, 0.2);
+  border-radius: 15px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.349);
+}
+
+.drop {
+  display: inline-block;
+  position: relative;
+}
+
+.drop-content {
+  /* For styling the content itself */
+  background-color: #f2f2f2;
+  min-width: 150px;
+  display: none;
+  position: absolute;
+}
+
+.drop-content a {
+  /* For styling the links inside the content */
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+}
+.drop-content a:hover {
+  /* Change the color of the dropdown links when they are hovered on */
+  background-color: rgba(40, 68, 40, 0.473);
+}
+.drop:hover .drop-content {
+  /* Shows the dropdown menu list when hovered on */
+  display: block;
+}
+.drop:hover .drop_btn {
+  /* Changes the dropdown button color once it is hovered on as well */
+  background-color: #60966c;
+}

@@ -1,0 +1,48 @@
+.App {
+  text-align: match-parent;
+}
+
+.App-header {
+  background-color: #a5e998;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(5, 99, 8);
+}
+
+.App-NavBar {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+}
+
+.App-Main {
+  background-color: #a5e998;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(5, 99, 8);
+}
+
+.App-Footer {
+  background-color: #a5e998;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(5, 99, 8);
+}
+.App-link {
+  color: #053307;
+}
