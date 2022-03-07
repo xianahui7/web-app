@@ -35,6 +35,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .imagecontainer {
@@ -48,8 +49,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
   text-shadow: 0 0 3px #1d4226, 0 0 5px #2d0f9b;
   color: #b3ceb9;
-  position: absolute;
+  position: relative;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 2.5rem;
 }
@@ -110,6 +113,7 @@ textarea {
   cursor: pointer;
   border-radius: 50%;
   text-shadow: 0 0 3px #104b1e, 0 0 5px #14168f;
+  box-shadow: 0px 7px 29px 0px #888888;
 }
 .linechart {
   border: none;
@@ -117,14 +121,11 @@ textarea {
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 15px;
-  margin: 4px 2px;
   text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
-  display: center;
-  padding: 150px;
-  background: rgba(136, 213, 236, 0.2);
-  border-radius: 50%;
+  padding: 200px;
+  background: rgba(218, 229, 151, 0.2);
 }
 .piechart {
   border: none;
@@ -132,14 +133,11 @@ textarea {
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 15px;
-  margin: 4px 2px;
   text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
-  display: center;
-  padding: 150px;
+  padding: 100px;
   background: rgba(218, 229, 151, 0.2);
-  border-radius: 50%;
 }
 
 .barchart {
@@ -148,16 +146,11 @@ textarea {
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 15px;
-  margin: 4px 2px;
   text-shadow: 0 0 3px #86b992, 0 0 5px #77b0ca;
-  display: center;
-  padding: 150px;
-  height: 30%;
-  width: 30%;
-  background: rgba(210, 241, 152, 0.2);
-  border-radius: 15px;
+  padding: 100px;
+  background: rgba(218, 229, 151, 0.2);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
