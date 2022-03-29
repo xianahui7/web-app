@@ -2,15 +2,15 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "../src/Styling/index.css";
 //import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
-import Home from "./Home";
-import Add from "./Add";
-import MyPlants from "./MyPlants";
-import pp from "./pp";
+import Navigation from "../src/WebpageComponents/Navigation";
+import Footer from "../src/WebpageComponents/Footer";
+import Home from "../src/WebPages/Home";
+import Add from "../src/WebPages/Add";
+import MyPlants from "../src/WebPages/MyPlants";
+import pp from "../src/WebPages/pp";
 
 ReactDOM.render(
   <Router>
@@ -18,7 +18,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/add" element={<Add />}/>
-      <Route path="/MyPlants" element={<MyPlants />} />
+      <Route path="/MyPlant" element={<MyPlants />} />
       <Route path="/pp" element={<pp />} />
     </Routes>
     <Footer />

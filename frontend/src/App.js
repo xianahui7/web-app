@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Footer from './Footer.js';
 
-function App() { //stateless react component functional
+function App() { //stateless react component functional NOT IN USE as of right now 
   return (
     <div className="App">
       <header className="App-header">
-      <Header />
       </header> 
-      
-    <Footer/>
+
     </div>
   );//div is end of wrapper
 }
