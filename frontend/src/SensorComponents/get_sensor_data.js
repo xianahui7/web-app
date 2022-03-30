@@ -7,24 +7,22 @@ function Get_sensor_data(props){
     redirect: 'follow'
     };
 
+    var url = '/getsensordata?' + 'plantid=' + props.plantid +'&onlylastrecord=True';
+
     const [sensor, setSensor] = useState("");
 
     async function fetchData(){
         try {
-            const response = await fetch('/getsensordata', requestOptions)
+            const response = await fetch(url, requestOptions)
             let data = await response.json();
             // console.log(data);
             let specificPlant=[];
 
             for (const row of data) {
-
-                if (row.plantid === props.plantid) {
                     specificPlant.push(row);
-                }
             }
           
-            setSensor(specificPlant[(specificPlant.length-1)]); // Fetching 1st Row ATM.
-            console.log(specificPlant)
+            setSensor(specificPlant); // Fetching 1st Row ATM.
         } catch (error) {
             console.log("error", error);
         }
@@ -35,7 +33,7 @@ function Get_sensor_data(props){
         fetchData();
     }, []);
 
-    // console.log(sensor)
+    console.log(sensor)
 
     return (
 
@@ -44,6 +42,7 @@ function Get_sensor_data(props){
             Moisture Sensor: {sensor.soilmoisture} <br/>
             Temperature Sensor: {sensor.temperature} <br/>
             Humidity Sensor: {sensor.humidity} <br/>
+            Date Time Stamp: {sensor.datetimestamp}<br/>
         </p>
     </div>
     )

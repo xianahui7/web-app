@@ -9,22 +9,22 @@ function Get_sensor_history(props){
     };
 
     const [sensor, setSensor] = useState("");
+    var url = '/getsensordata?plantid=' + props.plantid;
 
     async function fetchData(){
         try {
-            const response = await fetch('/getsensordata', requestOptions)
+            const response = await fetch(url, requestOptions)
             let data = await response.json();
             let specificPlant=[];
+            
+            // console.log(data);
 
             for (const row of data) {
-
-                if (row.plantid === props.plantid) {
                     specificPlant.push(row);
-                }
             }
           
             setSensor(specificPlant); // Fetching 1st Row ATM.
-            console.log(specificPlant)
+
         } catch (error) {
             console.log("error", error);
         }

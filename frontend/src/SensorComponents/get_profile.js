@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import Get_profile_helper from "./get_profile_helper";
 
 function Get_profile(arg){
     var myHeaders = new Headers();
@@ -12,26 +13,34 @@ function Get_profile(arg){
     
     const [profile, setProfile] = useState("");
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/getprofile', requestOptions)
-                let data = await response.json();
-                setProfile(data[0]); // Setting First Row ATM
-            } catch (error) {
-                console.log("error", error);
+    async function fetchData(){
+        try {
+            const response = await fetch('/getprofile', requestOptions)
+            let data = await response.json();
+            let specificProfile =[];
+            
+            for (const row of data){
+                specificProfile.push(row);
             }
-        };
+
+            // console.log(specificProfile);
+            setProfile(specificProfile); // Setting First Row ATM
+        } catch (error) {
+            console.log("error", error);
+        }
+    };
+
+    useEffect(() => {
         fetchData();
     }, []);
 
-    console.log(profile)
     return (
         <div>
             <p>
-                Profile ID: {profile.profileid} <br/>
-                Profile Name: {profile.profilename} <br/>
-                Threshold: {profile.threshold} <br/>
+            {Object.keys(profile).map((key, idx) => {
+            return( <Get_profile_helper key={idx} profile={profile[idx]} />)
+            })
+            }
             </p> 
         </div>
         )
