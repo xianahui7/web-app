@@ -8,8 +8,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "../src/WebpageComponents/Navigation";
 import Footer from "../src/WebpageComponents/Footer";
 import Home from "../src/WebPages/Home";
-import Add from "../src/WebPages/Add";
+import Add_Plant from "../src/WebPages/Add_Plant";
+import Add_Profile from "../src/WebPages/Add_Profile";
 import MyPlants from "../src/WebPages/MyPlants";
+import Update_Prof from "../src/WebPages/Update_Prof";
+
 import pp from "../src/WebPages/pp";
 
 ReactDOM.render(
@@ -17,8 +20,10 @@ ReactDOM.render(
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/add" element={<Add />}/>
+      <Route path="/Add_Plant" element={<Add_Plant/>}/>
+      <Route path="/Add_Profile" element={<Add_Profile/>}/>
       <Route path="/MyPlant" element={<MyPlants />} />
+      <Route path="/Update_Prof" element={<Update_Prof />}/>
       <Route path="/pp" element={<pp />} />
     </Routes>
     <Footer />
