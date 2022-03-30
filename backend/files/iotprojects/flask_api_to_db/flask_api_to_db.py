@@ -24,7 +24,7 @@ def home():
 
 
 # Table: profile
-@app.route('/addprofile', methods=['POST'])
+@app.route('/addprofile', methods=['POST']) # Work on this 
 def api_addprofile():
     data = None
     if(request.data):
@@ -69,11 +69,11 @@ def api_updateprofile():
     call = sqlclient.updateprofile(profileid=profileid, profilename=profilename, threshold=threshold)
     return jsonify(success=call)
 
-@app.route('/getprofile', methods=['GET'])
+@app.route('/getprofile', methods=['GET']) # Get
 def api_getprofile():
     data = None
-    if(request.data):
-        data = request.get_json()
+    if(request.args):
+        data = request.args
     
     profileid = None
     profilename = None
@@ -128,7 +128,7 @@ def api_addplant():
     call = sqlclient.addplant(profileid=profileid, plantname=plantname)
     return jsonify(success=call)
 
-@app.route('/updateplant', methods=['PATCH'])
+@app.route('/updateplant', methods=['PATCH']) 
 def api_updateplant():
     
     data = None
@@ -154,11 +154,11 @@ def api_updateplant():
     call = sqlclient.updateplant(plantid=plantid, profilename=profilename, profileid=profileid)
     return jsonify(success=call)
 
-@app.route('/getplant', methods=['GET'])
+@app.route('/getplant', methods=['GET']) 
 def api_getplant():
     data = None
-    if(request.data):
-        data = request.get_json()
+    if(request.args):
+        data = request.args
     
     plantid=None 
     plantname=None
@@ -232,8 +232,8 @@ def api_addsensordata():
 @app.route('/getsensordata', methods=['GET'])
 def api_getsensordata():
     data = None
-    if(request.data):
-        data = request.get_json()
+    if(request.args):
+        data = request.args
     
     sensordataid=None 
     plantid=None
