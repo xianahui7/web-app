@@ -69,7 +69,7 @@ def api_updateprofile():
     call = sqlclient.updateprofile(profileid=profileid, profilename=profilename, threshold=threshold)
     return jsonify(success=call)
 
-@app.route('/getprofile', methods=['GET']) # Get
+@app.route('/getprofile', methods=['GET']) 
 def api_getprofile():
     data = None
     if(request.args):

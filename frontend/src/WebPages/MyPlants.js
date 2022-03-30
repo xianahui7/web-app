@@ -2,6 +2,8 @@ import React from "react";
 import { render } from "react-dom";
 import LineChart from "../Graphs/LineChart";
 import BarChart from "../Graphs/BarChart";
+import Get_sensor_data from "../component/get_sensor_data"
+
 function MyPlants() {
       return (
         <div className="myplants">

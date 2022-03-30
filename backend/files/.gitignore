@@ -1,0 +1,3 @@
+venv/*
+./iotprojects/sql_handler/__pycache__/*
+iotprojects.egg-info/*

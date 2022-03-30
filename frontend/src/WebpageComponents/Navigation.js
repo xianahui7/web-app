@@ -18,15 +18,28 @@ function Navigation() {
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/Add">
-                  Add a Plant 
+                <NavLink className="nav-link" to="/Add_Profile">
+                  Add a Profile 
                 </NavLink>
               </li>
-              
-                <NavLink className="nav-link" to="/MyPlant">
-                  My Plant
-      
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Update_Prof">
+                  Update Profile
                 </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Add_Plant">
+                  Add Plant
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+              <NavLink className="nav-link" to="/MyPlant">
+                  My Plant
+                </NavLink>
+              </li>
                  
         </ul>  
         </div>
