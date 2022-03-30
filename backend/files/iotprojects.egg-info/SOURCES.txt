@@ -1,7 +1,0 @@
-README.md
-setup.py
-iotprojects.egg-info/PKG-INFO
-iotprojects.egg-info/SOURCES.txt
-iotprojects.egg-info/dependency_links.txt
-iotprojects.egg-info/requires.txt
-iotprojects.egg-info/top_level.txt
