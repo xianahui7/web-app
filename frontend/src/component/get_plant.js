@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import Get_profile_helper from "./helper_functions/get_profile_helper";
+import Get_plant_helper from "./helper_functions/get_plant_helper";
 
-function Get_profile(){
+function Get_plant(){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -11,20 +11,20 @@ function Get_profile(){
     redirect: 'follow'
     };
     
-    const [profile, setProfile] = useState("");
+    const [plant, setPlant] = useState("");
 
     async function fetchData(){
         try {
-            const response = await fetch('/getprofile', requestOptions)
+            const response = await fetch('/getplant', requestOptions)
             let data = await response.json();
-            let specificProfile =[];
+            let specificPlant =[];
             
             for (const row of data){
-                specificProfile.push(row);
+                specificPlant.push(row);
             }
 
-            // console.log(specificProfile);
-            setProfile(specificProfile); // Setting First Row ATM
+            console.log(specificPlant);
+            setPlant(specificPlant); // Setting First Row ATM
         } catch (error) {
             console.log("error", error);
         }
@@ -37,8 +37,8 @@ function Get_profile(){
     return (
         <div>
             <p>
-            {Object.keys(profile).map((key, idx) => {
-            return( <Get_profile_helper key={idx} profile={profile[idx]} />)
+            {Object.keys(plant).map((key, idx) => {
+            return( <Get_plant_helper key={idx} profile={plant[idx]} />)
             })
             }
             </p> 
@@ -46,4 +46,4 @@ function Get_profile(){
         )
 }
 
-export default Get_profile;
+export default Get_plant;

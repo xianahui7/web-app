@@ -1,12 +1,12 @@
-function Update_profile(profileid, profilename, threshold){
+function Update_plant(plantid, profileid, plantname){
 
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
+    "plantid": plantid,
     "profileid": profileid,
-    "profilename": profilename,
-    "threshold": threshold
+    "plantname": plantname
     });
 
     var requestOptions = {
@@ -16,10 +16,10 @@ var myHeaders = new Headers();
     redirect: 'follow'
     };
 
-    fetch("/updateprofile", requestOptions)
+    fetch("/updateplant", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 }
 
-export default Update_profile;
+export default Update_plant;

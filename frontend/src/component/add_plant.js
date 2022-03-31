@@ -1,25 +1,27 @@
-function Update_profile(profileid, profilename, threshold){
+import React, {useState, useEffect} from "react";
 
-var myHeaders = new Headers();
+function Add_plant(profileid, plantname){
+    var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "profileid": profileid,
-    "profilename": profilename,
-    "threshold": threshold
+    "profileid": profileid, 
+    "plantname": plantname,
     });
 
     var requestOptions = {
-    method: 'PATCH',
+    method: 'POST',
     headers: myHeaders,
     body: raw,
     redirect: 'follow'
     };
 
-    fetch("/updateprofile", requestOptions)
+    fetch("/addplant", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+
+    return <p>Plant Added to DB</p>
 }
 
-export default Update_profile;
+export default Add_plant;

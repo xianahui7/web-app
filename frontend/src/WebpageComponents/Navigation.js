@@ -42,6 +42,18 @@ function Navigation() {
               </li>
 
               <li className="nav-item">
+                <NavLink className="nav-link" to="/Update_Plant">
+                  Update Plant
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Remove_Plant">
+                  Remove Plant
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
               <NavLink className="nav-link" to="/MyPlant">
                   My Plant
                 </NavLink>

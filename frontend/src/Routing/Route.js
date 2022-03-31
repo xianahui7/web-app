@@ -5,5 +5,7 @@ export { default as Add_Plant } from "../src/WebPages/Add_Plant";
 export { default as MyPlants } from "../src/WebPages/MyPlants";
 export { default as Update_Prof } from "../src/WebPages/Update_Prof";
 export { default as Remove_Prof } from "../src/WebPages/Remove_Prof";
+export { default as Update_Plant } from "../src/WebPages/Update_Plant";
+export { default as Remove_Plant } from "../src/WebPages/Remove_Plant";
 
 export { default as pp } from "../src/WebPages/pp";

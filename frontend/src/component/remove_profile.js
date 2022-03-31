@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-function Remove_Profile(profileid, profilename){
+function Remove_profile(profileid, profilename){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -23,4 +23,4 @@ function Remove_Profile(profileid, profilename){
 
 }
 
-export default Remove_Profile;
+export default Remove_profile;

@@ -1,5 +1,5 @@
 import React from "react";
-import Update_Profile from "../component/update_profile"
+import Update_profile from "../component/update_profile"
 import Get_Profile from "../component/get_profile"
 
 function Update_Prof() {
@@ -14,7 +14,7 @@ function Update_Prof() {
       SmThres: ${smthres}
     `);
 
-    Update_Profile(profileid, profilename, smthres);
+    Update_profile(profileid, profilename, smthres);
 
     console.log("Called Function Successfully");
     event.preventDefault();
