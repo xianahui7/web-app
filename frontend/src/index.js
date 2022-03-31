@@ -12,6 +12,8 @@ import Add_Plant from "../src/WebPages/Add_Plant";
 import Add_Profile from "../src/WebPages/Add_Profile";
 import MyPlants from "../src/WebPages/MyPlants";
 import Update_Prof from "../src/WebPages/Update_Prof";
+import Remove_Prof from "../src/WebPages/Remove_Prof";
+
 
 import pp from "../src/WebPages/pp";
 
@@ -24,6 +26,7 @@ ReactDOM.render(
       <Route path="/Add_Profile" element={<Add_Profile/>}/>
       <Route path="/MyPlant" element={<MyPlants />} />
       <Route path="/Update_Prof" element={<Update_Prof />}/>
+      <Route path="/Remove_Prof" element={<Remove_Prof />}/>
       <Route path="/pp" element={<pp />} />
     </Routes>
     <Footer />

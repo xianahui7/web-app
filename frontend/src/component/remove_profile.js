@@ -1,27 +1,26 @@
 import React, {useState, useEffect} from "react";
 
-function Add_profile(profilename, smthres){
+function Remove_Profile(profileid, profilename){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "profilename": profilename, 
-    "threshold": smthres,
+    "profileid": profileid,
+    "profilename": profilename
     });
 
     var requestOptions = {
-    method: 'POST',
+    method: 'DELETE',
     headers: myHeaders,
     body: raw,
     redirect: 'follow'
     };
 
-    fetch("/addprofile", requestOptions)
+    fetch("/removeprofile", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-    return <p>Profile Added to DB</p>
 }
 
-export default Add_profile;
+export default Remove_Profile;

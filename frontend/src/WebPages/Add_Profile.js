@@ -16,7 +16,6 @@ function Add_Profile() {
 
     Add_profile(profilename, smthres);
     
-    console.log("Called Function Successfully");
     event.preventDefault();
   }
 

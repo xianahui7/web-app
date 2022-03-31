@@ -30,6 +30,12 @@ function Navigation() {
               </li>
 
               <li className="nav-item">
+                <NavLink className="nav-link" to="/Remove_Prof">
+                  Remove Profile
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/Add_Plant">
                   Add Plant
                 </NavLink>
