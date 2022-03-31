@@ -1,10 +1,9 @@
-function Update_profile(profileid, profilename, threshold){
+function Update_profile(profilename, threshold){
 
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "profileid": profileid,
     "profilename": profilename,
     "threshold": threshold
     });
@@ -15,6 +14,8 @@ var myHeaders = new Headers();
     body: raw,
     redirect: 'follow'
     };
+
+    console.log(raw);
 
     fetch("/updateprofile", requestOptions)
     .then(response => response.text())

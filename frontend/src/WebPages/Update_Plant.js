@@ -4,18 +4,16 @@ import Get_plant from "../component/get_plant"
 
 function Update_Plant() {
   const [profileid, setProfileid] = React.useState("");
-  const [plantid, setPlantid] = React.useState("");
   const [plantname, setPlantName] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      Plant ID: ${plantid}
-      Profile ID: ${profileid}
-      Plant Name: ${plantname}
+    Plant Name: ${plantname},
+    Profile ID: ${profileid}
     `);
 
 
-    Update_plant(plantid, profileid, plantname);
+    Update_plant(profileid, plantname);
     console.log("Called Function Successfully");
     event.preventDefault();
   }
@@ -28,12 +26,12 @@ function Update_Plant() {
       <h1>Update a Plant</h1>
 
       <label>
-         Plant ID:
+          Plant Name:
         <input
-          name="plantid"
-          type="plantid"
-          value={plantid}
-          onChange={e => setPlantid(e.target.value)}
+          name="plantname"
+          type="plantname"
+          value={plantname}
+          onChange={e => setPlantName(e.target.value)}
           required />
       </label>
 
@@ -44,16 +42,6 @@ function Update_Plant() {
           type="profileid"
           value={profileid}
           onChange={e => setProfileid(e.target.value)}
-          required />
-      </label>
-
-      <label>
-          Plant Name:
-        <input
-          name="plantname"
-          type="plantname"
-          value={plantname}
-          onChange={e => setPlantName(e.target.value)}
           required />
       </label>
 

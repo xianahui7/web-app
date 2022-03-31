@@ -3,14 +3,14 @@ import Remove_profile from "../component/remove_profile"
 import Get_Profile from "../component/get_profile"
 
 function Remove_Prof() {
-  const [profileid, setProfileid] = React.useState("");
+  const [profilename, setProfileName] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      Profileid: ${profileid}
+      Profile Name: ${profilename}
     `);
 
-    Remove_profile(profileid);
+    Remove_profile(profilename);
 
     event.preventDefault();
   }
@@ -23,12 +23,12 @@ function Remove_Prof() {
       <h1>Delete a Profile</h1>
 
       <label>
-         Profile ID:
+         Profile Name:
         <input
-          name="profileid"
-          type="profileid"
-          value={profileid}
-          onChange={e => setProfileid(e.target.value)}
+          name="profilename"
+          type="profilename"
+          value={profilename}
+          onChange={e => setProfileName(e.target.value)}
           required />
       </label>
       <button class="button">Submit</button>

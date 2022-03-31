@@ -3,14 +3,14 @@ import Remove_plant from "../component/remove_plant";
 import Get_plant from "../component/get_plant";
 
 function Remove_Plant() {
-  const [plantid, setPlantid] = React.useState("");
+  const [plantname, setPlantName] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      Profileid: ${plantid}
+      plantname: ${plantname}
     `);
 
-    Remove_plant(plantid);
+    Remove_plant(plantname);
 
     event.preventDefault();
   }
@@ -23,12 +23,12 @@ function Remove_Plant() {
       <h1>Delete a Profile</h1>
 
       <label>
-         Profile ID:
+         Plane Name:
         <input
-          name="plantid"
-          type="plantid"
-          value={plantid}
-          onChange={e => setPlantid(e.target.value)}
+          name="plantname"
+          type="plantname"
+          value={plantname}
+          onChange={e => setPlantName(e.target.value)}
           required />
       </label>
 

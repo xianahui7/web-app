@@ -1,12 +1,11 @@
-function Update_plant(plantid, profileid, plantname){
+function Update_plant(profileid, plantname){
 
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "plantid": plantid,
-    "profileid": profileid,
-    "plantname": plantname
+    "plantname": plantname,
+    "profileid": profileid
     });
 
     var requestOptions = {
@@ -15,6 +14,8 @@ var myHeaders = new Headers();
     body: raw,
     redirect: 'follow'
     };
+
+    console.log(raw);
 
     fetch("/updateplant", requestOptions)
     .then(response => response.text())

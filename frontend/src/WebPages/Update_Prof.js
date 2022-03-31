@@ -3,18 +3,16 @@ import Update_profile from "../component/update_profile"
 import Get_Profile from "../component/get_profile"
 
 function Update_Prof() {
-  const [profileid, setProfileid] = React.useState("");
   const [profilename, setProfileName] = React.useState("");
   const [smthres, setSmThres] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      Profileid: ${profileid}
       ProfileName: ${profilename}
       SmThres: ${smthres}
     `);
-
-    Update_profile(profileid, profilename, smthres);
+    
+    Update_profile(profilename, smthres);
 
     console.log("Called Function Successfully");
     event.preventDefault();
@@ -26,16 +24,6 @@ function Update_Prof() {
         <Get_Profile/>
     <form onSubmit={handleSubmit}>
       <h1>Update a Profile</h1>
-
-      <label>
-         Profile ID:
-        <input
-          name="profileid"
-          type="profileid"
-          value={profileid}
-          onChange={e => setProfileid(e.target.value)}
-          required />
-      </label>
 
       <label>
          Profile Name:

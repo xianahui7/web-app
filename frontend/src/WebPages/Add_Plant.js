@@ -5,8 +5,9 @@ import Get_plant from "../component/get_plant";
 
 function Add_Plant() {
 
-  const [plantname, setPlantName] = React.useState("");
   const [profileid, setProfileid] = React.useState("");
+  const [plantname, setPlantName] = React.useState("");
+  // const [profilename, setProfileName] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
@@ -14,7 +15,8 @@ function Add_Plant() {
       plantname: ${plantname}
     `);
 
-    Add_plant(profileid, plantname);
+    // Add_plant(plantname, profilename);
+    Add_plant(plantname, profileid);
 
     console.log("Called Function Successfully");
     event.preventDefault();
@@ -28,7 +30,16 @@ function Add_Plant() {
       <h1>Add a Plant</h1>
 
       <label>
-      
+          Plant Name:
+        <input
+          name="plantname"
+          type="plantname"
+          value={plantname}
+          onChange={e => setPlantName(e.target.value)}
+          required />
+      </label>
+
+      <label>
          Profile ID:
         <input
           name="profileid"
@@ -38,15 +49,15 @@ function Add_Plant() {
           required />
       </label>
 
-      <label>
-          Plant Name:
+      {/* <label>
+         Profile ID:
         <input
-          name="plantname"
-          type="plantname"
-          value={plantname}
-          onChange={e => setPlantName(e.target.value)}
+          name="profilename"
+          type="profilename"
+          value={profilename}
+          onChange={e => setProfileName(e.target.value)}
           required />
-      </label>
+      </label> */}
 
       <button class="button">Submit</button>
     </form>

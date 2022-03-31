@@ -6,9 +6,8 @@ function Get_plant_helper(props){
 
     return(
         <p>
-            Plant ID: {props.profile.plantid} <br/>
-            Profile ID: {props.profile.profileid} <br/>
             Plant Name: {props.profile.plantname} <br/>
+            Profile ID: {props.profile.profileid} <br/>
         </p>
     )
 }

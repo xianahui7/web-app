@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 
-function Add_plant(profileid, plantname){
+function Add_plant(plantname, profileid){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "profileid": profileid, 
-    "plantname": plantname,
+        "plantname": plantname,
+        "profileid": profileid
     });
 
     var requestOptions = {
