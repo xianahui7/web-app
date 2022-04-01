@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 import LineChart from "../Graphs/LineChart";
-import BarChart from "../Graphs/BarChart";
 import Get_sensor_data from "../component/get_sensor_data"
-import Add_sensor_data from "../component/testing_functions/add_sensor_data";
+import Generate_graph from "../component/generate_graph";
+
 
 function MyPlants() {
       return (
@@ -15,7 +15,7 @@ function MyPlants() {
           </div>
         </div>
         <div class = 'row'>
-          <BarChart/>
+          <Generate_graph/>
         </div>
       </div>
       );
