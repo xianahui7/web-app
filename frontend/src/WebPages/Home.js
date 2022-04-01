@@ -8,13 +8,9 @@ function Home() {
   return (
 
     <div className="home">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-         
-            <p>
-              Graph of current plant
-            </p>
+          <div class="col">
             <LineChart/>
             <BarChart/>
             <PieChart/>

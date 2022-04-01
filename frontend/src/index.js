@@ -2,10 +2,11 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../src/Styling/index.css";
-//import * as serviceWorker from "./serviceWorker";
+// import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navigation from "../src/WebpageComponents/Navigation";
+import Navigation from "./WebpageComponents/Navigation";
 import Footer from "../src/WebpageComponents/Footer";
 import Home from "../src/WebPages/Home";
 import Add_Plant from "../src/WebPages/Add_Plant";
@@ -33,7 +34,7 @@ ReactDOM.render(
       <Route path="/Remove_Plant" element={<Remove_Plant />}/>
       <Route path="/pp" element={<pp />} />
     </Routes>
-    <Footer />
+    <Footer/>
   </Router>,
 
   document.getElementById("root")

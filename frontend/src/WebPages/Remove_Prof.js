@@ -11,31 +11,36 @@ function Remove_Prof() {
     `);
 
     Remove_profile(profilename);
-
-    event.preventDefault();
-  }
+    
+    alert("Profile has been removed.");
+    }
 
   return (
-    <div className="add">
-      <div class="container">
-        <Get_Profile/>
-    <form onSubmit={handleSubmit}>
-      <h1>Delete a Profile</h1>
+    <div class="container-fluid add">
+    <div class = 'row'>
+      <div class='col'>
+       <form onSubmit={handleSubmit}>
+         <h1 class='title'>Delete a Profile</h1><br/>
 
-      <label>
-         Profile Name:
-        <input
-          name="profilename"
-          type="profilename"
-          value={profilename}
-          onChange={e => setProfileName(e.target.value)}
-          required />
-      </label>
-      <button class="button">Submit</button>
-    </form>
-    </div>
-  </div>
-      
+         <label>
+             Profile Name:
+           <input
+             name="profilename"
+             type="profilename"
+             value={profilename}
+             onChange={e => setProfileName(e.target.value)}
+             required />
+         </label> <br/>
+         <button class="button">Submit</button>
+         </form>
+       </div>
+
+       <div class='col'>
+         <h1 class='title'>Existing Profile(s)</h1> <br/>
+         <Get_Profile/>
+       </div>
+     </div>
+ </div>
   );
     }
     

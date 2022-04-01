@@ -11,32 +11,35 @@ function Remove_Plant() {
     `);
 
     Remove_plant(plantname);
-
-    event.preventDefault();
+    alert("Plant has been removed.");
   }
 
   return (
-    <div className="add">
-      <div class="container">
-        <Get_plant/>
-    <form onSubmit={handleSubmit}>
-      <h1>Delete a Profile</h1>
+    <div class="container-fluid add">
+    <div class = 'row'>
+      <div class='col'>
+       <form onSubmit={handleSubmit}>
+         <h1 class='title'>Delete a Plant</h1><br/>
 
-      <label>
-         Plane Name:
-        <input
-          name="plantname"
-          type="plantname"
-          value={plantname}
-          onChange={e => setPlantName(e.target.value)}
-          required />
-      </label>
+         <label>
+             Plant Name:
+           <input
+             name="plantname"
+             type="plantname"
+             value={plantname}
+             onChange={e => setPlantName(e.target.value)}
+             required />
+         </label> <br/>
+         <button class="button">Submit</button>
+         </form>
+       </div>
 
-      <button class="button">Submit</button>
-    </form>
-    </div>
+       <div class='col'>
+         <h1 class='title'>Existing Plants</h1> <br/>
+         <Get_plant/>
+       </div>
+     </div>
   </div>
-      
   );
     }
     

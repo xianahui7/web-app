@@ -13,43 +13,47 @@ function Update_Prof() {
     `);
     
     Update_profile(profilename, smthres);
-
+    alert("Profile has been updated");
     console.log("Called Function Successfully");
-    event.preventDefault();
   }
 
   return (
-    <div className="add">
-      <div class="container">
-        <Get_Profile/>
-    <form onSubmit={handleSubmit}>
-      <h1>Update a Profile</h1>
-
-      <label>
-         Profile Name:
-        <input
-          name="profilename"
-          type="profilename"
-          value={profilename}
-          onChange={e => setProfileName(e.target.value)}
-          required />
-      </label>
-
-      <label>
-          Soil Moisture Threshold:
-        <input
-          name="smthres"
-          type="smthres"
-          value={smthres}
-          onChange={e => setSmThres(e.target.value)}
-          required />
-      </label>
-
-      <button class="button">Submit</button>
-    </form>
-    </div>
-  </div>
-      
+      <div class="container-fluid add">
+      <div class = 'row'>
+        <div class='col'>
+         <form onSubmit={handleSubmit}>
+           <h1 class='title'>Update a Profile</h1><br/>
+  
+           <label>
+               Profile Name:
+             <input
+               name="profilename"
+               type="profilename"
+               value={profilename}
+               onChange={e => setProfileName(e.target.value)}
+               required />
+           </label> <br/>
+  
+           <label>
+             Moisture Threshold:
+             <input
+               name="smthres"
+               type="smthres"
+               value={smthres}
+               onChange={e => setSmThres(e.target.value)}
+               required />
+           </label>
+           <br/>
+           <button class="button">Submit</button>
+           </form>
+         </div>
+  
+         <div class='col'>
+           <h1 class='title'>Existing Profile(s)</h1> <br/>
+           <Get_Profile/>
+         </div>
+       </div>
+   </div>
   );
     }
     
