@@ -15,42 +15,46 @@ function Add_Profile() {
     `);
 
     Add_profile(profilename, smthres);
-    
-    event.preventDefault();
+    alert("Profile has been successfully added.");
   }
 
   return (
-    <div className="add">
-      <div class="container">
-    <form onSubmit={handleSubmit}>
-      <h1>Add Custom Profile</h1>
+    <div class="container-fluid add">
+    <div class = 'row'>
+      <div class='col'>
+       <form onSubmit={handleSubmit}>
+         <h1 class='title'>Add a Profile</h1><br/>
 
-      <label>
-         Profile Name:
-        <input
-          name="profilename"
-          type="profilename"
-          value={profilename}
-          onChange={e => setProfileName(e.target.value)}
-          required />
-      </label>
+         <label>
+             Profile Name:
+           <input
+             name="profilename"
+             type="profilename"
+             value={profilename}
+             onChange={e => setProfileName(e.target.value)}
+             required />
+         </label> <br/>
 
-      <label>
-          Soil Moisture Threshold:
-        <input
-          name="smthres"
-          type="smthres"
-          value={smthres}
-          onChange={e => setSmThres(e.target.value)}
-          required />
-      </label>
+         <label>
+           Moisture Threshold:
+           <input
+             name="smthres"
+             type="smthres"
+             value={smthres}
+             onChange={e => setSmThres(e.target.value)}
+             required />
+         </label>
+         <br/>
+         <button class="button">Submit</button>
+         </form>
+       </div>
 
-      <button class="button">Submit</button>
-    </form>
-      <Get_Profile/>
-    </div>
-  </div>
-      
+       <div class='col'>
+         <h1 class='title'>Existing Profile(s)</h1> <br/>
+         <Get_Profile/>
+       </div>
+     </div>
+ </div>
   );
     }
     

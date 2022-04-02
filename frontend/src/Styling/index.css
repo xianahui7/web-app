@@ -45,11 +45,12 @@ body {
 }
 
 .footer {
+  background:rgba(19, 86, 10, 0.656);
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
   text-shadow: 0 0 3px #1d4226, 0 0 5px #2d0f9b;
-  color: #b3ceb9;
-  position: relative;
+  color: #ffffff;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -71,14 +72,11 @@ body {
 }
 
 .add {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   color: #f8f8f8;
   margin: 10 10 10 10;
-  height: 10em;
-  padding-right: 35%;
-  padding-left: 35%;
-  padding-bottom: 35%;
+  padding-bottom: 25%;
   padding-top: 10%;
   text-shadow: 0 0 3px #d2dd30, 0 0 5px #200b69;
   background: rgba(231, 226, 226, 0.4);
@@ -196,4 +194,28 @@ a:hover {
 .drop:hover .drop_btn {
   /* Changes the dropdown button color once it is hovered on as well */
   background-color: #60966c;
+}
+
+.title{
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+.display_analytics{
+  font-size: 30px;
+  text-align: left;
+  color: #f8f8f8;
+  margin: 10 10 10 10;
+  padding-bottom: 25%;
+  padding-top: 10%;
+  text-shadow: 0 0 3px #d2dd30, 0 0 5px #200b69;
+  background: rgba(231, 226, 226, 0.4);
+}
+
+.drop-down-menu{
+  color: black;
+}
+
+.nav-link{
+  color: black;
 }

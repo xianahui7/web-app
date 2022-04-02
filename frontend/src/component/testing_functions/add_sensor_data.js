@@ -5,9 +5,10 @@ function Add_sensor_data(){
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "plantid": 2, 
-    "soilmoisture": 1,
-    "temperature": 45
+    "plantid": 1, 
+    "soilmoisture": 3,
+    "temperature": 29,
+    "humidity": 10
     });
 
     var requestOptions = {
