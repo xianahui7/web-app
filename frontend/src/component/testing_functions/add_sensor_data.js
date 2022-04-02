@@ -6,9 +6,9 @@ function Add_sensor_data(){
 
     var raw = JSON.stringify({
     "plantid": 1, 
-    "soilmoisture": 1,
-    "temperature": 45,
-    "humidity": 40
+    "soilmoisture": 3,
+    "temperature": 29,
+    "humidity": 10
     });
 
     var requestOptions = {

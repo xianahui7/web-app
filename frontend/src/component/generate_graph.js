@@ -5,7 +5,7 @@ import BarChart from "../Graphs/BarChart";
 function parse_time(timestamp){
 
     let time = timestamp.slice(11,16);
-
+    console.log(time);
     return time;
 
 }
@@ -24,7 +24,7 @@ function Generate_graph(){
             const response = await fetch(url, requestOptions)
             let data = await response.json();
             let specificPlant=[];
-            
+                        
             for (const row of data) {
                     specificPlant.push(row);
             }
@@ -39,20 +39,31 @@ function Generate_graph(){
         fetchData();
     }, []);
 
-    let sin = []
+    let sin = [],
+        sin2 = [];
 
     for (const row of sensor) {
         sin.push({
             'x': parse_time(row.datetimestamp),
             'y': row.temperature
         });
+
+        sin2.push({
+            'x': parse_time(row.datetimestamp),
+            'y': row.humidity
+        });
     }
 
     let data = [
         {
             values: sin,
-            key: 'Stream #0',
+            key: 'Temp',
             color: '#1de9b6'
+        },
+        {
+            values: sin2,
+            key: 'Humidty',
+            color: '#1dcc6'
         }
     ];
 

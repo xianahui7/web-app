@@ -1,8 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
-import LineChart from "../Graphs/LineChart";
-import Get_sensor_data from "../component/get_sensor_data"
+import Get_sensor_data from "../component/get_sensor_data";
 import Generate_graph from "../component/generate_graph";
+import Add_sensor_data from "../component/testing_functions/add_sensor_data";
 
 
 function MyPlants() {
