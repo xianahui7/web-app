@@ -66,6 +66,9 @@ body {
   margin-right: 30px;
 }
 
+img{
+  height:150px;
+}
 .label {
   float: center;
   width: 20em;

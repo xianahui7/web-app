@@ -13,21 +13,30 @@ function Home() {
        <br/><br/><br/>
        <h2>List of Materials</h2>
        <br/>
+
        <ul >
-        <li>
-          NodeMCU ESP8266/ESP32
+       <li>
+          NodeMCU ESP8266/ESP32<br/>
+          <img src = '/pictures/esp8266.jpg' alt=''/>
+
         </li>
 
         <li>
-          Light Sensor
+        Light Sensor<br/>
+          <img src = '/pictures/light_sensor.jpg' alt=''/>
+
         </li>
 
         <li>
-          Soil Moisture Sensor 
+        Soil Moisture Sensor <br/>
+          <img src = '/pictures/moisture_sensor.jpg' alt=''/>
+          <br/>
         </li>
 
         <li>
-          DHT-11 Sensor
+          DHT-11 Sensor<br/>
+          <img src = '/pictures/temp_humid_sensor.jpg' alt=''/>
+          <br/>
         </li>
 
         <li>
