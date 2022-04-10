@@ -84,6 +84,13 @@ body {
 img{
   height:175px;
 }
+
+/* Used to overwrite bookstrap default css for drop down menu*/
+
+.nav-link{
+  color: black;
+}
+
 .label {
   float: center;
   width: 20em;
