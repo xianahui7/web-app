@@ -9,34 +9,36 @@ function Home() {
        <br/>
        The goal of our project was to create an automated irrigation system. This project aims to build a conceptual idea for our future to become more sustainable. The current scope is focused on small at-home gardens to encourage more people to be sustainable. It makes maintaining a garden easier by making it self-sustainable.
        <br/><br/>
-       The goal of the IoT: Automated Irrigation System is to provide the convenience of an automated system to water plants and display sensor analytics for plant owners. 
+       The goal of the IoT : Automated Irrigation System is to provide the convenience of an automated system to water plants and display sensor analytics for plant owners. 
        <br/><br/><br/>
+       
        <h2>List of Materials</h2>
        <br/>
 
        <ul >
        <li>
-          NodeMCU ESP8266/ESP32<br/>
-          <img src = '/pictures/esp8266.jpg' alt=''/>
-
+          <h4>NodeMCU ESP8266/ESP32</h4>
+          <img src = '/pictures/esp8266.jpg' alt=''/><br/>
+          Microcontroller Units that will interface with all the sensors and send data to the Raspberry Pi via MQTT
+          <br/><br/><br/>
         </li>
-
         <li>
-        Light Sensor<br/>
-          <img src = '/pictures/light_sensor.jpg' alt=''/>
-
+          <h4>Light Sensor</h4>
+          <img src = '/pictures/light_sensor.jpg' alt=''/> <br/>
+          A photoresistor that outputs the analog reading of the amount of light in the facing direction
+          <br/><br/><br/>
         </li>
-
         <li>
-        Soil Moisture Sensor <br/>
-          <img src = '/pictures/moisture_sensor.jpg' alt=''/>
-          <br/>
+          <h4>Soil Moisture Sensor</h4>
+          <img src = '/pictures/moisture_sensor.jpg' alt=''/><br/>
+          A capacitance moisture sensor that will alert the Arduino if the plant needs to be watered
+          <br/><br/><br/>
         </li>
-
         <li>
-          DHT-11 Sensor<br/>
-          <img src = '/pictures/temp_humid_sensor.jpg' alt=''/>
-          <br/>
+          <h4>DHT-11 Sensor</h4>
+          <img src = '/pictures/temp_humid_sensor.jpg' alt=''/><br/>
+          A two-in-one sensor that records the temperature and humidity levels of its surroundings
+          <br/><br/><br/>
         </li>
 
         <li>
