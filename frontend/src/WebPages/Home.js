@@ -3,7 +3,6 @@ import "../Styling/index.css";
 
 function Home() {
   return (
-
     <div className="home">
        <h1>Welcome to IoT:Automated Irrigation System</h1>
        <br/>
@@ -11,52 +10,73 @@ function Home() {
        <br/><br/>
        The goal of the IoT : Automated Irrigation System is to provide the convenience of an automated system to water plants and display sensor analytics for plant owners. 
        <br/><br/><br/>
-       
        <h2>List of Materials</h2>
        <br/>
-
-       <ul >
+       <ul > 
        <li>
-          <h4>NodeMCU ESP8266/ESP32</h4>
-          <img src = '/pictures/esp8266.jpg' alt=''/><br/>
-          Microcontroller Units that will interface with all the sensors and send data to the Raspberry Pi via MQTT
-          <br/><br/><br/>
+          <div class="flex-container"> 
+            <div class="flex-left">
+            <img src = '/pictures/esp8266.jpg' alt=''/><br/>
+            </div>
+            <div class="flex-right">
+              <h5>NodeMCU ESP8266/ESP32:</h5> <br/>
+              Microcontroller Units that will interface with all the sensors and send data to the Raspberry Pi via MQTT
+            </div>
+          </div>
         </li>
+        <br/><br/>
         <li>
-          <h4>Light Sensor</h4>
+        <div class="flex-container"> 
+          <div class="flex-left">
           <img src = '/pictures/light_sensor.jpg' alt=''/> <br/>
-          A photoresistor that outputs the analog reading of the amount of light in the facing direction
-          <br/><br/><br/>
+          </div>
+          <div class="flex-right">
+            <h5>Light Sensor</h5> <br/>
+            A photoresistor that outputs the analog reading of the amount of light in the facing direction
+          </div>
+        </div>
         </li>
+        <br/><br/>
         <li>
-          <h4>Soil Moisture Sensor</h4>
-          <img src = '/pictures/moisture_sensor.jpg' alt=''/><br/>
-          A capacitance moisture sensor that will alert the Arduino if the plant needs to be watered
-          <br/><br/><br/>
+          <div class="flex-container"> 
+            <div class="flex-left">
+            <img src = '/pictures/moisture_sensor.jpg' alt=''/><br/>
+            </div>
+            <div class="flex-right">
+            <h5>Soil Moisture Sensor</h5> <br/>
+            A capacitance moisture sensor that will alert the Arduino if the plant needs to be watered
+            </div>
+          </div>
         </li>
+        <br/><br/>
         <li>
-          <h4>DHT-11 Sensor</h4>
-          <img src = '/pictures/temp_humid_sensor.jpg' alt=''/><br/>
-          A two-in-one sensor that records the temperature and humidity levels of its surroundings
-          <br/><br/><br/>
+        <div class="flex-container"> 
+            <div class="flex-left">
+              <img src = '/pictures/temp_humid_sensor.jpg' alt=''/><br/>
+            </div>
+            <div class="flex-right">
+              <h5>DHT-11 Sensor</h5> <br/>
+              A two-in-one sensor that records the temperature and humidity levels of its surroundings
+            </div>
+          </div>
         </li>
-
+        <br/><br/>
         <li>
           ADC I2C Module
         </li>
-
+        <br/><br/>
         <li>
           5V One Channel Relay Module
         </li>
-
+        <br/><br/>
         <li>
           Water Pump
-        </li>
-
+        </li> 
+        <br/><br/>
         <li>
           Power Supply Module
         </li>
-
+        <br/><br/>
         <li>
           Raspberry Pi 
         </li>
