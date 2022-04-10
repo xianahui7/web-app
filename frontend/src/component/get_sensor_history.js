@@ -10,7 +10,7 @@ function Get_sensor_history(props){
 
     const [sensor, setSensor] = useState("");
     var url = '/getsensordata?plantid=' + props.plantid;
-
+//
     async function fetchData(){
         try {
             const response = await fetch(url, requestOptions)
