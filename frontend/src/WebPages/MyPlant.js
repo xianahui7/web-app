@@ -7,11 +7,11 @@ function MyPlant() {
       return (
         <div>
           <div className="row">
-            {/* <div className= 'app-container col'>
+            <div className= 'app-container col'>
               <h1 className='title_div'><b>Existing Profilies</b></h1>
               <br/>
               <Get_profile/>
-            </div> */}
+            </div>
 
             <div className= 'app-container col'>
               <h1 className='title_div'><b>Existing Plants</b></h1>

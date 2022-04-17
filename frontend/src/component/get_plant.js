@@ -6,16 +6,16 @@ import ReadOnlyRow_plant from "./table_functions/ReadOnlyRow_plant";
 
 
 function Get_plant(){
+    // Holds array of plant objects from API
     const [plant, setPlant] = useState("");
     
     const [plantname, setPlantName] = useState("");
-    const [editplantname, setEditPlantName] = useState("");
+    const [editPlantID, setEditPlantID] = useState(null);
 
+    // Holds array of profile objects from API
+    const [profile, setProfile] = useState("");
     const [profilename, setProfileName] = useState("");
-    const [profileID, setProfileID] = useState("");
-
     const [editprofilename, setEditProfileName] = useState("");
-    const [editPlantID, seteditPlantID] = useState(null);
 
     
     var myHeaders = new Headers();
@@ -29,18 +29,39 @@ function Get_plant(){
     
     async function fetchData(){
         try {
+            // Getting PLant Data
             const response = await fetch('/getplant', requestOptions)
-            let data = await response.json();
+            let plantdata = await response.json();
             let specificPlant =[];
             
-            console.log(data);
+            // console.log(plantdata);
 
-            for (const row of data){
+            for (const row of plantdata){
                 specificPlant.push(row);
             }
 
             // console.log(specificProfile);
             setPlant(specificPlant); // Setting First Row ATM
+
+        } catch (error) {
+            console.log("error", error);
+        }
+
+        try {
+            // Getting PLant Data
+            const response = await fetch('/getprofile', requestOptions)
+            let profiledata = await response.json();
+            let specificProfile =[];
+            
+            // console.log(profiledata);
+
+            for (const row of profiledata){
+                specificProfile.push(row);
+            }
+
+            // console.log(specificProfile);
+            setProfile(specificProfile); 
+
         } catch (error) {
             console.log("error", error);
         }
@@ -64,11 +85,12 @@ function Get_plant(){
 
     const handleEditClick = (event, plant) => {
         event.preventDefault();
-        seteditPlantID(plant.plantid);
+        setEditPlantID(plant.plantid);
+        
     }
 
     const handleCancelClick = (event) => {
-        seteditPlantID(null);
+        setEditPlantID(null);
     }
 
     const handleDeleteClick = (event, plant) => {
@@ -77,21 +99,28 @@ function Get_plant(){
 
     }
 
-    const handleEditProfileSubmit = (event) => {
-        event.preventDefault();
-        Update_plant(plantname, profileID);
-        
+    const handleEditPlantSubmit = (event) => {
+        Update_plant(editPlantID, editprofilename);        
       }
+
+    function getProfileName(profileid){
+
+        for(const row of profile){
+            if(profileid === row.profileid){
+                return (row.profilename);
+            }
+        }
+    }
 
     return (
         
         <div>
-            <form onSubmit={handleEditProfileSubmit}>
+            <form onSubmit={handleEditPlantSubmit}>
                 <table>
                     <thead>
                         <tr>
                             <th>Plant Name</th>
-                            <th>Profile ID</th>
+                            <th>Profile Name</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -111,7 +140,7 @@ function Get_plant(){
                                             name="profile_name_edit"
                                             required="requried"
                                             placeholder={plant[idx].profileID}
-                                            onChange={e => setProfileID(e.target.value)}
+                                            onChange={e => setEditProfileName(e.target.value)}
                                             ></input>
                                             </td>
 
@@ -123,6 +152,7 @@ function Get_plant(){
                                         </tr>
                                         ) : ( <ReadOnlyRow_plant key={idx} 
                                                                         plant={plant[idx]} 
+                                                                        profilename={getProfileName(plant[idx].profileid)}
                                                                         handleEditClick={handleEditClick}
                                                                         handleDeleteClick={handleDeleteClick} />
                                         )}

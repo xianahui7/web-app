@@ -1,10 +1,10 @@
 import React from "react";
 
-const ReadOnlyRow_plant = ({ plant, handleEditClick, handleDeleteClick}) => {
+const ReadOnlyRow_plant = ({ plant, handleEditClick, handleDeleteClick, profilename}) => {
     return(
         <tr>        
             <td> {plant.plantname} </td>
-            <td> {plant.profileid}   </td>
+            <td> {profilename} </td>
             <td>
                 <button 
                     type='button' 
