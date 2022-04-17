@@ -34,14 +34,23 @@ function Get_profile(){
         fetchData();
     }, []);
 
+    console.log(profile);
+
     return (
         <div>
-            <p>
-            {Object.keys(profile).map((key, idx) => {
-            return( <Get_profile_helper key={idx} profile={profile[idx]} />)
-            })
-            }
-            </p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plant Profile</th>
+                        <th>Moisture Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {Object.keys(profile).map((key, idx) => {
+                            return(<Get_profile_helper key={idx} profile={profile[idx]} />)
+                        })}
+                </tbody>
+            </table>
         </div>
         )
 }

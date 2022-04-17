@@ -4,7 +4,7 @@ import Generate_graph from "../component/generate_graph";
 import Add_sensor_data from "../component/testing_functions/add_sensor_data";
 
 
-function MyPlants() {
+function Analytics() {
       return (
         <div class="container-fluid display_analytics">
         <div class = 'row'>
@@ -20,4 +20,4 @@ function MyPlants() {
       );
     }
     
-    export default MyPlants;
+    export default Analytics;
