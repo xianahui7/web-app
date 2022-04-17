@@ -1,21 +1,21 @@
 import React from "react";
 
-const ReadOnlyRow = ({ profile, handleEditClick, handleDeleteClick}) => {
+const ReadOnlyRow_plant = ({ plant, handleEditClick, handleDeleteClick}) => {
     return(
         <tr>        
-            <td> {profile.profilename} </td>
-            <td> {profile.threshold}%   </td>
+            <td> {plant.plantname} </td>
+            <td> {plant.profileid}   </td>
             <td>
                 <button 
                     type='button' 
-                    onClick={(event)=> handleEditClick(event, profile)}
+                    onClick={(event)=> handleEditClick(event, plant)}
                 >
                     Edit 
                 </button>
                 
                 <button
                     type ='button'
-                    onClick={(event) => handleDeleteClick(event, profile)}>
+                    onClick={(event) => handleDeleteClick(event, plant)}>
                     Delete
                 </button>
             </td>
@@ -24,4 +24,4 @@ const ReadOnlyRow = ({ profile, handleEditClick, handleDeleteClick}) => {
     
 }
 
-export default ReadOnlyRow;
+export default ReadOnlyRow_plant;

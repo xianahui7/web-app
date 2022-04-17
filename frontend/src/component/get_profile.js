@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment} from "react";
 import Add_profile from "./add_profile";
 import Update_profile from "./update_profile";
 import Remove_profile from "./remove_profile";
-import ReadOnlyRow from "./table_functions/ReadOnlyRow";
+import ReadOnlyRow_profile from "./table_functions/ReadOnlyRow_profile";
 
 
 function Get_profile(){
@@ -78,9 +78,7 @@ function Get_profile(){
     }
 
     const handleEditProfileSubmit = (event) => {
-        event.preventDefault();
-    
-        if(threshold > 100 || threshold < 0){
+        if(threshold_edit > 100 || threshold_edit < 0){
           alert('Please enter a value from 0 - 100');
         }
         else{
@@ -129,7 +127,7 @@ function Get_profile(){
 
                                             </td>
                                         </tr>
-                                        ) : ( <ReadOnlyRow key={idx} 
+                                        ) : ( <ReadOnlyRow_profile key={idx} 
                                                             profile={profile[idx]} 
                                                             handleEditClick={handleEditClick}
                                                             handleDeleteClick={handleDeleteClick} />

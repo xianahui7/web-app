@@ -1,9 +1,10 @@
 .app-container {
-    width: 80%;
+    width: 50%;
     height: fit-content;
     padding: 20px;
     margin-top: 6%;
-    margin-left: 5%;
+    margin-left: 70px;
+    margin-right: 70px;
 
     display: block;
     border-radius: 25px;
