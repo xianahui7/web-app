@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import {NavDropdown} from 'react-bootstrap';
 import "../Styling/index.css";
-import pp from "../WebPages/pp";
 //import {Button } from 'reactstrap';
 //import {DropdownItem} from 'reactstrap';
 
