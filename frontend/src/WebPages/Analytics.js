@@ -8,10 +8,7 @@ function Analytics() {
       return (
         <div class="container-fluid display_analytics">
         <div class = 'row'>
-          <div class='col'>
-            <h1 class='title'>Most Recent Data</h1><br/>
             <Get_sensor_data plantid={1}/>
-          </div>
         </div>
         <div class = 'row'>
           <Generate_graph/>

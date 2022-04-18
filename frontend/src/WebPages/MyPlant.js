@@ -1,6 +1,7 @@
 import React from "react";
 import Get_plant from "../component/get_plant";
-import Get_profile from "../component/get_profile"
+import Get_profile from "../component/get_profile";
+import Add_sensor_data from "../component/testing_functions/add_sensor_data";
 
 function MyPlant() {
 
@@ -20,7 +21,6 @@ function MyPlant() {
             </div>
 
           </div>
-         
         </div>
       );
     }

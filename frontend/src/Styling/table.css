@@ -10,6 +10,31 @@
     border-radius: 25px;
     background-color: #ffffffd1;
   }
+  .app-container2 {
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 1%;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+
+  .most_recent_data{
+    width: 70%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 8%;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
 
   .title_div{
     color: #000000;
@@ -18,7 +43,13 @@
   
   table {
     border-collapse: collapse;
-    width: 50%;
+    width: 70%;
+    margin-bottom: 2%;
+  }
+
+  .table2 {
+    border-collapse: collapse;
+    width: 75%;
     margin-bottom: 2%;
   }
   

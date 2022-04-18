@@ -39,13 +39,54 @@ function Get_sensor_data(props){
 
     return (
 
-    <div>
-        <p>
-            Moisture Sensor: {sensor.soilmoisture} <br/>
-            Temperature Sensor: {sensor.temperature} <br/>
-            Humidity Sensor: {sensor.humidity} <br/>
-            Date Time Stamp: {sensor.datetimestamp}<br/>
-        </p>
+    <div className = "most_recent_data">
+        <h1 class='title'>Most Recent Data</h1><br/>
+
+         <table className="table2">
+            <thead>
+                <tr>
+                    <th>Moisture</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Light</th>
+                </tr>
+            </thead>
+            <tbody>
+                {/* {Object.keys(profile).map((key, idx) => {
+                    return(
+                        <Fragment>
+                            {editProfileID === profile[idx].profileid ? (
+                                <tr>        
+                                    <td>
+                                        {profile[idx].profilename}
+                                    </td>
+
+                                    <td>
+                                    <input
+                                    type="threshold_edit"
+                                    name="threshold_edit"
+                                    required="requried"
+                                    placeholder={profile[idx].threshold}
+                                    onChange={e => setThresholdEdit(e.target.value)}
+                                    ></input>
+                                    </td>
+
+                                    <td>
+                                        <button type="submit">Save</button>
+                                        <button type="submit" onClick={handleCancelClick}>Cancel</button>
+
+                                    </td>
+                                </tr>
+                                ) : ( <ReadOnlyRow_profile key={idx} 
+                                                    profile={profile[idx]} 
+                                                    handleEditClick={handleEditClick}
+                                                    handleDeleteClick={handleDeleteClick} />
+                                )}
+                        </Fragment>
+                    )
+                })} */}
+            </tbody>
+        </table>
     </div>
     )
 }
