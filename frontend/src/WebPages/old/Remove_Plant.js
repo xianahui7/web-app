@@ -1,6 +1,6 @@
 import React from "react";
-import Remove_plant from "../component/remove_plant";
-import Get_plant from "../component/get_plant";
+import Remove_plant from "../../component/remove_plant";
+import Get_plant from "../../component/get_plant";
 
 function Remove_Plant() {
   const [plantname, setPlantName] = React.useState("");

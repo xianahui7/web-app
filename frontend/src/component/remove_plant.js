@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 
-function Remove_plant(plantname){
+function Remove_plant(plantid){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "plantname": plantname,
+    "plantid": plantid,
     });
 
     var requestOptions = {

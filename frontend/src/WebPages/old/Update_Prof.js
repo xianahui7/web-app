@@ -1,6 +1,6 @@
 import React from "react";
-import Update_profile from "../component/update_profile"
-import Get_Profile from "../component/get_profile"
+import Update_profile from "../../component/update_profile"
+import Get_Profile from "../../component/get_profile"
 
 function Update_Prof() {
   const [profilename, setProfileName] = React.useState("");

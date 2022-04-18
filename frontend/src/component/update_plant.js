@@ -1,11 +1,11 @@
-function Update_plant(profileid, plantname){
+function Update_plant(plantid, profilename){
 
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "plantname": plantname,
-    "profileid": profileid
+    "plantid": plantid,
+    "profilename": profilename
     });
 
     var requestOptions = {

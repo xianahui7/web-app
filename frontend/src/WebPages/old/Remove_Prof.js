@@ -1,29 +1,26 @@
-
 import React from "react";
-import Add_profile from "../component/add_profile"
-import Get_Profile from "../component/get_profile"
+import Remove_profile from "../../component/remove_profile"
+import Get_Profile from "../../component/get_profile"
 
-function Add_Profile() {
-
+function Remove_Prof() {
   const [profilename, setProfileName] = React.useState("");
-  const [smthres, setSmThres] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      ProfileName: ${profilename}
-      SmThres: ${smthres}
+      Profile Name: ${profilename}
     `);
 
-    Add_profile(profilename, smthres);
-    alert("Profile has been successfully added.");
-  }
+    Remove_profile(profilename);
+    
+    alert("Profile has been removed.");
+    }
 
   return (
     <div class="container-fluid add">
     <div class = 'row'>
       <div class='col'>
        <form onSubmit={handleSubmit}>
-         <h1 class='title'>Add a Profile</h1><br/>
+         <h1 class='title'>Delete a Profile</h1><br/>
 
          <label>
              Profile Name:
@@ -34,17 +31,6 @@ function Add_Profile() {
              onChange={e => setProfileName(e.target.value)}
              required />
          </label> <br/>
-
-         <label>
-           Moisture Threshold:
-           <input
-             name="smthres"
-             type="smthres"
-             value={smthres}
-             onChange={e => setSmThres(e.target.value)}
-             required />
-         </label>
-         <br/>
          <button class="button">Submit</button>
          </form>
        </div>
@@ -58,4 +44,4 @@ function Add_Profile() {
   );
     }
     
-    export default Add_Profile;
+    export default Remove_Prof;

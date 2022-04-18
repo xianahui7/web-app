@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 
-function Add_plant(plantname, profileid){
+function Add_plant(plantname, profilename){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
         "plantname": plantname,
-        "profileid": profileid
+        "profilename": profilename
     });
 
     var requestOptions = {
@@ -21,7 +21,6 @@ function Add_plant(plantname, profileid){
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-    return <p>Plant Added to DB</p>
 }
 
 export default Add_plant;

@@ -1,3 +1,4 @@
+import { randomLcg } from "d3";
 import React, {useState, useEffect} from "react";
 
 function Add_sensor_data(){
@@ -6,9 +7,9 @@ function Add_sensor_data(){
 
     var raw = JSON.stringify({
     "plantid": 1, 
-    "soilmoisture": 3,
-    "temperature": 29,
-    "humidity": 10
+    "soilmoisture": Math.random()*100,
+    "temperature": Math.random()*100,
+    "humidity": Math.random()*100
     });
 
     var requestOptions = {

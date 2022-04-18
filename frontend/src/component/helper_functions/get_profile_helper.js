@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 function Get_profile_helper(props){
     
-    //console.log(props);
+    console.log(props);
 
     return(
-        <p>
-            Profile ID: {props.profile.profileid} <br/>
-            Profile Name: {props.profile.profilename} <br/>
-            Moisture Threshold: {props.profile.threshold} <br/>
-        </p>
+        <tr>        
+            <td className = 'td'> {props.profile.profilename} </td>
+            <td className = 'td'> {props.profile.threshold}%   </td>
+        </tr>
     )
 }
 

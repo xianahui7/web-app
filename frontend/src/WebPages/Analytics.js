@@ -4,20 +4,18 @@ import Generate_graph from "../component/generate_graph";
 import Add_sensor_data from "../component/testing_functions/add_sensor_data";
 
 
-function MyPlants() {
+function Analytics() {
       return (
-        <div class="container-fluid display_analytics">
+        <div class="display_analytics">
         <div class = 'row'>
-          <div class='col'>
-            <h1 class='title'>Most Recent Data</h1><br/>
             <Get_sensor_data plantid={1}/>
-          </div>
+            <br/>
         </div>
-        <div class = 'row'>
+        <div class = 'graph row'>
           <Generate_graph/>
         </div>
       </div>
       );
     }
     
-    export default MyPlants;
+    export default Analytics;

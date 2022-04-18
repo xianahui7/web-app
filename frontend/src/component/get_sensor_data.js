@@ -1,34 +1,28 @@
 import React, {useState, useEffect} from "react";
+import ReadOnlyRow_sensor from "./table_functions/ReadOnlyRow_sensor"
 
 
 function Get_sensor_data(props){
+
+    const [sensor, setSensor] = useState("");
+
     var requestOptions = {
     method: 'GET',
     redirect: 'follow'
     };
 
     var url = '/getsensordata?' + 'plantid=' + props.plantid +'&onlylastrecord=True';
-    // console.log(url);
-    const [sensor, setSensor] = useState("");
+    //console.log(url);
 
     async function fetchData(){
         try {
             const response = await fetch(url, requestOptions)
             let data = await response.json();
             
-            // console.log(data);
-
-            let specificPlant=[];
-
-            for (const row of data) {
-                    specificPlant.push(row);
-            }
-          
-            setSensor(specificPlant[0]); // Fetching 1st Row ATM.
+            setSensor(data[0]);
         } catch (error) {
             console.log("error", error);
         }
-
     };
 
     useEffect(() => {
@@ -39,13 +33,22 @@ function Get_sensor_data(props){
 
     return (
 
-    <div>
-        <p>
-            Moisture Sensor: {sensor.soilmoisture} <br/>
-            Temperature Sensor: {sensor.temperature} <br/>
-            Humidity Sensor: {sensor.humidity} <br/>
-            Date Time Stamp: {sensor.datetimestamp}<br/>
-        </p>
+    <div className = "most_recent_data">
+        <h1 class='title'>Most Recent Data</h1><br/>
+
+         <table className="table2">
+            <thead>
+                <tr>
+                    <th>Moisture</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Time Stamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <ReadOnlyRow_sensor sensor={sensor} />
+            </tbody>
+        </table>
     </div>
     )
 }

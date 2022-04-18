@@ -1,0 +1,98 @@
+.app-container {
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 6%;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+  .app-container2 {
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 1%;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+
+  .most_recent_data{
+    width: 70%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 8%;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+  
+  .graph{
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 5%;;
+    margin-left: 60px;
+    margin-right: 5%;
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+
+  .title_div{
+    color: #000000;
+    font-size: 35px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-bottom: 2%;
+  }
+
+  .table2 {
+    border-collapse: collapse;
+    width: 75%;
+    margin-bottom: 2%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+    font-size: 25px;
+  }
+  
+  th {
+    background-color: #abdbb4aa;
+  }
+  
+  td {
+    background-color: #ffffff95;
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  form * {
+    font-size: 28px;
+  }
+
+  .myplantrow{
+    margin-bottom: 14%;
+  }

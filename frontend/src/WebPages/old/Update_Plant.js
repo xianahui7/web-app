@@ -1,33 +1,28 @@
-
 import React from "react";
-import Add_plant from "../component/add_plant";
-import Get_plant from "../component/get_plant";
+import Update_plant from "../../component/update_plant"
+import Get_plant from "../../component/get_plant"
 
-function Add_Plant() {
-
+function Update_Plant() {
   const [profileid, setProfileid] = React.useState("");
   const [plantname, setPlantName] = React.useState("");
-  // const [profilename, setProfileName] = React.useState("");
   
   const handleSubmit = (event) => {
     console.log(`
-      profileid: ${profileid}
-      plantname: ${plantname}
+    Plant Name: ${plantname},
+    Profile ID: ${profileid}
     `);
 
-    // Add_plant(plantname, profilename);
-    Add_plant(plantname, profileid);
-
+    Update_plant(profileid, plantname);
+    alert("Plant has been updated.");
     console.log("Called Function Successfully");
   }
 
   return (
-     <div class="container-fluid add">
-       <div class = 'row'>
-         <div class='col'>
+    <div class="container-fluid add">
+      <div class = 'row'>
+        <div class='col'>
           <form onSubmit={handleSubmit}>
-            <h1 class='title'>Add a Plant</h1><br/>
-
+            <h1 class='title'>Update a Plant</h1><br/>
             <label>
                 Plant Name:
               <input
@@ -47,28 +42,18 @@ function Add_Plant() {
                 onChange={e => setProfileid(e.target.value)}
                 required />
             </label>
-
-            {/* <label>
-              Profile ID:
-              <input
-                name="profilename"
-                type="profilename"
-                value={profilename}
-                onChange={e => setProfileName(e.target.value)}
-                required />
-            </label> */}
             <br/>
             <button class="button">Submit</button>
-            </form>
-          </div>
-
-          <div class='col'>
-            <h1 class='title'>Existing Plants</h1> <br/>
-            <Get_plant/>
-          </div>
+          </form>
         </div>
-    </div>   
+
+        <div class='col'>
+          <h1 class='title'>Existing Plants</h1> <br/>
+          <Get_plant/>
+        </div>
+      </div>
+     </div>
   );
     }
     
-    export default Add_Plant;
+    export default Update_Plant;

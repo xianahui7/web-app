@@ -1,12 +1,19 @@
 import React, {useState, useEffect} from "react";
 import Get_sensor_history_helper from "./helper_functions/get_sensor_history_helper";
-import BarChart from "../Graphs/BarChart";
+import LineChart from "../Graphs/LineChart";
 
 function parse_time(timestamp){
 
     let time = timestamp.slice(11,16);
-    console.log(time);
-    return time;
+    // console.log(time);
+
+    let hour = parseFloat(time);
+    //console.log(hour);
+
+    let minute = parseFloat(time.slice(3,5))/100;
+    //console.log(minute);
+
+    return (hour + minute);
 
 }
 
@@ -39,38 +46,47 @@ function Generate_graph(){
         fetchData();
     }, []);
 
-    let sin = [],
-        sin2 = [];
+    let temperature = [],
+        humidity = [],
+        moisture =[];
 
     for (const row of sensor) {
-        sin.push({
+        temperature.push({
             'x': parse_time(row.datetimestamp),
-            'y': row.temperature
+            'y': row.temperature,
         });
 
-        sin2.push({
+        humidity.push({
             'x': parse_time(row.datetimestamp),
             'y': row.humidity
+        });
+
+        moisture.push({
+            'x': parse_time(row.datetimestamp),
+            'y': row.soilmoisture,
         });
     }
 
     let data = [
         {
-            values: sin,
+            values: temperature,
             key: 'Temp',
-            color: '#1de9b6'
+            color: '#e63946',
         },
         {
-            values: sin2,
+            values: humidity,
             key: 'Humidty',
-            color: '#1dcc6'
+            color: '#6c757d',
+        },
+        {
+            values: moisture,
+            key: 'Moisture',
+            color: '#457b9d', 
         }
     ];
 
     return (
-    <div>
-        <BarChart datum={data}/>
-    </div>
+        <LineChart datum={data}/>
     )
 }
 
