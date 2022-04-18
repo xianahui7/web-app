@@ -49,7 +49,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
   color: #000000;
   background-color: #d8f3dc;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
