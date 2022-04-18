@@ -7,7 +7,7 @@ function MyPlant() {
 
       return (
         <div>
-          <div className="row">
+          <div className="row myplantrow">
             <div className= 'app-container col'>
               <h1 className='title_div'><b>Existing Profilies</b></h1>
               <br/>
