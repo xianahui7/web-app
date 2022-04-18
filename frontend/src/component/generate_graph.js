@@ -46,33 +46,42 @@ function Generate_graph(){
         fetchData();
     }, []);
 
-    let sin = [],
-        sin2 = [];
+    let temperature = [],
+        humidity = [],
+        moisture =[];
 
     for (const row of sensor) {
-        sin.push({
+        temperature.push({
             'x': parse_time(row.datetimestamp),
             'y': row.temperature,
         });
 
-        sin2.push({
+        humidity.push({
             'x': parse_time(row.datetimestamp),
             'y': row.humidity
+        });
+
+        moisture.push({
+            'x': parse_time(row.datetimestamp),
+            'y': row.soilmoisture,
         });
     }
 
     let data = [
         {
-            values: sin,
+            values: temperature,
             key: 'Temp',
-            color: '#1de9b6',
-            area: true
+            color: '#e63946',
         },
         {
-            values: sin2,
+            values: humidity,
             key: 'Humidty',
-            color: '#52796F',
-            area: true
+            color: '#6c757d',
+        },
+        {
+            values: moisture,
+            key: 'Moisture',
+            color: '#457b9d', 
         }
     ];
 

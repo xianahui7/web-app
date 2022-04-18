@@ -6,11 +6,12 @@ import Add_sensor_data from "../component/testing_functions/add_sensor_data";
 
 function Analytics() {
       return (
-        <div class="container-fluid display_analytics">
+        <div class="display_analytics">
         <div class = 'row'>
             <Get_sensor_data plantid={1}/>
+            <br/>
         </div>
-        <div class = 'row'>
+        <div class = 'graph row'>
           <Generate_graph/>
         </div>
       </div>

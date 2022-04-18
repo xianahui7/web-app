@@ -19,7 +19,6 @@ function MyPlant() {
               <br/>
               <Get_plant/>
             </div>
-
           </div>
         </div>
       );

@@ -1,34 +1,28 @@
 import React, {useState, useEffect} from "react";
+import ReadOnlyRow_sensor from "./table_functions/ReadOnlyRow_sensor"
 
 
 function Get_sensor_data(props){
+
+    const [sensor, setSensor] = useState("");
+
     var requestOptions = {
     method: 'GET',
     redirect: 'follow'
     };
 
     var url = '/getsensordata?' + 'plantid=' + props.plantid +'&onlylastrecord=True';
-    // console.log(url);
-    const [sensor, setSensor] = useState("");
+    //console.log(url);
 
     async function fetchData(){
         try {
             const response = await fetch(url, requestOptions)
             let data = await response.json();
             
-            // console.log(data);
-
-            let specificPlant=[];
-
-            for (const row of data) {
-                    specificPlant.push(row);
-            }
-          
-            setSensor(specificPlant[0]); // Fetching 1st Row ATM.
+            setSensor(data[0]);
         } catch (error) {
             console.log("error", error);
         }
-
     };
 
     useEffect(() => {
@@ -48,43 +42,11 @@ function Get_sensor_data(props){
                     <th>Moisture</th>
                     <th>Temperature</th>
                     <th>Humidity</th>
-                    <th>Light</th>
+                    <th>Time Stamp</th>
                 </tr>
             </thead>
             <tbody>
-                {/* {Object.keys(profile).map((key, idx) => {
-                    return(
-                        <Fragment>
-                            {editProfileID === profile[idx].profileid ? (
-                                <tr>        
-                                    <td>
-                                        {profile[idx].profilename}
-                                    </td>
-
-                                    <td>
-                                    <input
-                                    type="threshold_edit"
-                                    name="threshold_edit"
-                                    required="requried"
-                                    placeholder={profile[idx].threshold}
-                                    onChange={e => setThresholdEdit(e.target.value)}
-                                    ></input>
-                                    </td>
-
-                                    <td>
-                                        <button type="submit">Save</button>
-                                        <button type="submit" onClick={handleCancelClick}>Cancel</button>
-
-                                    </td>
-                                </tr>
-                                ) : ( <ReadOnlyRow_profile key={idx} 
-                                                    profile={profile[idx]} 
-                                                    handleEditClick={handleEditClick}
-                                                    handleDeleteClick={handleDeleteClick} />
-                                )}
-                        </Fragment>
-                    )
-                })} */}
+                    <ReadOnlyRow_sensor sensor={sensor} />
             </tbody>
         </table>
     </div>

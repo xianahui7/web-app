@@ -30,7 +30,17 @@
     margin-top: 8%;
     margin-left: 70px;
     margin-right: 70px;
-
+    display: block;
+    border-radius: 25px;
+    background-color: #ffffffd1;
+  }
+  
+  .graph{
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 5%;;
+    margin-left: 60px;
+    margin-right: 5%;
     display: block;
     border-radius: 25px;
     background-color: #ffffffd1;
