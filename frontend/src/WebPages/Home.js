@@ -10,8 +10,8 @@ function Home() {
        <br/><br/>
        The goal of the IoT : Automated Irrigation System is to provide the convenience of an automated system to water plants and display sensor analytics for plant owners. 
        <br/><br/><br/>
-       <h2>List of Materials</h2>
-       <br/>
+       <h2>IoT Devices Used</h2>
+       <br/><br/>
        <ul > 
        <li>
           <div class="flex-container"> 
@@ -19,7 +19,7 @@ function Home() {
             <img src = '/pictures/esp8266.jpg' alt=''/><br/>
             </div>
             <div class="flex-right">
-              <h5>NodeMCU ESP8266/ESP32:</h5> <br/>
+              <h5>NodeMCU ESP8266/ESP32</h5> <br/>
               Microcontroller Units that will interface with all the sensors and send data to the Raspberry Pi via MQTT
             </div>
           </div>
@@ -60,27 +60,6 @@ function Home() {
             </div>
           </div>
         </li>
-        <br/><br/>
-        <li>
-          ADC I2C Module
-        </li>
-        <br/><br/>
-        <li>
-          5V One Channel Relay Module
-        </li>
-        <br/><br/>
-        <li>
-          Water Pump
-        </li> 
-        <br/><br/>
-        <li>
-          Power Supply Module
-        </li>
-        <br/><br/>
-        <li>
-          Raspberry Pi 
-        </li>
-        
       </ul>
     </div>
 
