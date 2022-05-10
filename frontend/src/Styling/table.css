@@ -3,20 +3,8 @@
     height: fit-content;
     padding: 20px;
     margin-top: 6%;
-    margin-left: 70px;
-    margin-right: 70px;
-
-    display: block;
-    border-radius: 25px;
-    background-color: #ffffffd1;
-  }
-  .app-container2 {
-    width: 50%;
-    height: fit-content;
-    padding: 20px;
-    margin-top: 1%;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 25px;
+    margin-right: 25px;
 
     display: block;
     border-radius: 25px;
@@ -24,7 +12,7 @@
   }
 
   .most_recent_data{
-    width: 70%;
+    width: 50%;
     height: fit-content;
     padding: 20px;
     margin-top: 8%;
@@ -36,7 +24,7 @@
   }
   
   .graph{
-    width: 60%;
+    width: 50%;
     margin-top: 2%;
     margin-bottom: 5%;;
     margin-left: 60px;
@@ -53,13 +41,13 @@
   
   table {
     border-collapse: collapse;
-    width: 70%;
+    width: 100%;
     margin-bottom: 2%;
   }
 
   .table2 {
     border-collapse: collapse;
-    width: 75%;
+    width: 100%;
     margin-bottom: 2%;
   }
   

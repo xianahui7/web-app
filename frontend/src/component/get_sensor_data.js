@@ -45,8 +45,9 @@ function Get_sensor_data(props){
     }
 
     return (
-
+    
     <div className = "most_recent_data">
+        <h1>Most Recent Data</h1><br/>
         {data_present() == true ?
          (
          <table className="table2">

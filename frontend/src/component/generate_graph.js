@@ -70,17 +70,17 @@ function Generate_graph(){
     let data = [
         {
             values: temperature,
-            key: 'Temp',
+            key: 'Temp (F)',
             color: '#e63946',
         },
         {
             values: humidity,
-            key: 'Humidty',
+            key: 'Humidty (%)',
             color: '#6c757d',
         },
         {
             values: moisture,
-            key: 'Moisture',
+            key: 'Moisture (%)',
             color: '#457b9d', 
         }
     ];

@@ -12,7 +12,9 @@ function Analytics() {
             <br/>
         </div>
         <div class = 'graph row'>
+          <div className = 'col'>
           <Generate_graph/>
+          </div>
         </div>
       </div>
       );
